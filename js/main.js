@@ -2,11 +2,12 @@
  * VENDITA BIGLIETTO TRENO
  ***************************/
 
-/** 
+/**
  * REFERENZE ELEMENTI
  */
 var container = document.getElementById('biglietto');
 var bottoneGenera = document.getElementById('bottoneGenera');
+var bottoneAnnulla = document.getElementById('bottoneAnnulla');
 
 
 
@@ -15,17 +16,17 @@ var bottoneGenera = document.getElementById('bottoneGenera');
  */
 
 // Generare il biglieto
-bottoneGenera.addEventListener('click', 
+bottoneGenera.addEventListener('click',
     function() {
         // Ottieni valori input utente
         var nome = document.getElementById('nome').value;
-        //console.log(nome); 
+        //console.log(nome);
 
         var kmDaPercorrere = document.getElementById('km').value;
-        //console.log(kmDaPercorrere); 
+        //console.log(kmDaPercorrere);
 
         var fasciaEta = document.getElementById('fascia-eta').value;
-        //console.log(fasciaEta); 
+        //console.log(fasciaEta);
 
         // Calcolo biglietto
         var prezzoKm = 0.21;
@@ -61,10 +62,14 @@ bottoneGenera.addEventListener('click',
 
         // Mostra biglietto
         container.className = 'show';
-    }   
+    }
 );
 
 // Reset biglietto
-
-
-
+bottoneAnnulla.addEventListener('click',
+  function() {
+    var nome = document.getElementById('nome').value = '';
+    var kmDaPercorrere = document.getElementById('km').value = '';
+    var fasciaEta = document.getElementById('fascia-eta').value = '';
+  }
+);
