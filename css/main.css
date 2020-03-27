@@ -1,3 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2,
+h3,
+th {
+  font-size: 18px;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+label,
+input,
+select,
+button {
+  margin: 3px 0;
+}
+
+label,
+input,
+select {
+  display: block;
+}
+
+button {
+  padding: 3px;
+}
+
+.row:last-of-type {
+  text-align: center;
+  margin-top: 10px;
+}
+
+input[type=number],
+input[type=text] {
+  width: 100%;
+  background-color: #c1deff;
+  border: none;
+  padding: 10px;
+}
 
 .show {
     opacity: 1;
